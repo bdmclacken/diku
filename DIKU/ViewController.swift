@@ -12,16 +12,14 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var theLabel: UILabel!
     
-    var tapCount = 0
+    @IBOutlet weak var text1: UITextField!
     
-    @IBAction func buttonPressed(_ sender: Any) {
-        self.theLabel.text = "Hello there!"
-        print("Button tapped")
-        tapCount = tapCount + 1
-        print(tapCount)
-        if tapCount >= 10 {
-            self.theLabel.text = "Wow you're excited with that button!"
-        }
+    @IBOutlet weak var text2: UITextField!
+
+    @IBAction func buttonPressed(_ sender: AnyObject) {
+
+        theLabel.text = "Computes to \(Double(text1.text!)! + Double(text2.text!)!)"
+        
     }
     
     @IBAction func buttonPressedNext(_ sender: Any) {
